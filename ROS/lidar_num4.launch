@@ -1,9 +1,8 @@
 <launch>
 
-<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /neato_laser 100" />
+   <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /neato_laser 100" />
 
-   <node pkg="roomba_lidar" type="lidar_publisher"
-    name="lidar_driver" output="screen">
+   <node pkg="roomba_lidar" type="lidar_publisher" name="lidar_driver" output="screen">
     <param name="port" value="/dev/ttyS3"/>
     <param name="baud_rate" value="115200"/>
     <param name="a_coef" value="0.0000367"/>
